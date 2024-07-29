@@ -94,4 +94,9 @@
     <p *ngSwitchCase="'Editor'">Modo Editor de Contenido activado!</p>
     <p *ngSwitchDefault>Modo Visitante activado!</p>
   </div>
+
+  <!-- input control flow -->
+  <hr />
+  <input type="color" name="inpt6" id="inpt6" [formControl]="frmColorCtrl" />
+  <p>Color: {{ frmColorCtrl.value }}</p>
 </div>
