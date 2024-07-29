@@ -17,12 +17,20 @@ export class LabsComponent {
     'Crear servicio',
   ];
 
+  myLocation = signal('La Villa');
+
   onClickMeHandler() {
     alert('Hola');
   }
 
   onChangeHandler(event: Event) {
     console.log(event);
+  }
+
+  onChangeRxHandler(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const myNewLocation = input.value;
+    this.myLocation.set(myNewLocation);
   }
 
   onKeyDownHandler(event: KeyboardEvent) {

@@ -40,4 +40,19 @@
       (keydown)="onKeyDownHandler($event)"
     />
   </p>
+
+  <!-- Reactivity model -->
+  <hr />
+  <h2>Signals</h2>
+  <p>Me encuentro en: {{ myLocation() }}</p>
+  <p>
+    <input
+      type="text"
+      name="txt4"
+      id="txt4"
+      [value]="myLocation()"
+      (change)="onChangeRxHandler($event)"
+    />
+  </p>
+  <p>Mi nueva ubicación: {{ myLocation() }}</p>
 </div>
