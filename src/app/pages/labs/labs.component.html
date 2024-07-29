@@ -99,4 +99,17 @@
   <hr />
   <input type="color" name="inpt6" id="inpt6" [formControl]="frmColorCtrl" />
   <p>Color: {{ frmColorCtrl.value }}</p>
+
+  <!-- attribute binding -->
+  <svg>
+    <g>
+      <rect
+        x="0"
+        y="0"
+        height="100"
+        width="100"
+        [attr.fill]="frmColorCtrl.value"
+      />
+    </g>
+  </svg>
 </div>
