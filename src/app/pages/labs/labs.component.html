@@ -112,4 +112,9 @@
       />
     </g>
   </svg>
+
+  <!-- css style property binding -->
+  <hr />
+  <input type="number" name="inpt7" id="inpt7" [formControl]="frmWidthCtrl" />
+  <span class="box" [style.width.px]="frmWidthCtrl.value"></span>
 </div>
