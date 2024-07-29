@@ -16,4 +16,8 @@ export class LabsComponent {
     'Crear componentes',
     'Crear servicio',
   ];
+
+  onClickMeHandler() {
+    alert('Hola');
+  }
 }
