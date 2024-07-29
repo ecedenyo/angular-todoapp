@@ -25,6 +25,12 @@ export class LabsComponent {
   ]);
 
   myLocation = signal('La Villa');
+  user = signal({
+    name: 'Emerson',
+    age: 18,
+    isPartner: false,
+    role: 'Editor',
+  });
 
   onClickMeHandler() {
     alert('Hola');
@@ -43,5 +49,15 @@ export class LabsComponent {
   onKeyDownHandler(event: KeyboardEvent) {
     const input = event.target as HTMLInputElement;
     console.log(input.value);
+  }
+
+  onAgeChangeHandler(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.user.update((prevState) => {
+      return {
+        ...prevState,
+        age: parseInt(input.value, 10),
+      };
+    });
   }
 }

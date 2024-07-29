@@ -65,4 +65,25 @@
     }}
     <li *ngFor="let myTask of myTasks(); index as i">{{ i }}. {{ myTask }}</li>
   </ul>
+
+  <!-- if flow -->
+  <hr />
+  <!-- Eg. 1 -->
+  <div *ngIf="1 === 1">My important content!</div>
+  <p>&nbsp;</p>
+  <!-- Eg. 2 -->
+  <label for="txt5">Edad: </label>
+  <input
+    type="number"
+    name="txt5"
+    id="txt5"
+    [value]="user().age"
+    (change)="onAgeChangeHandler($event)"
+  /><br />
+  <p *ngIf="user().name == 'Emerson' && user().age > 18; else elseBlock">
+    Perfil completo <strong>con</strong> lista de Proyectos y Clientes
+  </p>
+  <ng-template #elseBlock>
+    Perfil completo <strong>sin</strong> lista de Proyectos y Clientes
+  </ng-template>
 </div>
