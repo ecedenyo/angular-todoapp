@@ -20,4 +20,13 @@ export class LabsComponent {
   onClickMeHandler() {
     alert('Hola');
   }
+
+  onChangeHandler(event: Event) {
+    console.log(event);
+  }
+
+  onKeyDownHandler(event: KeyboardEvent) {
+    const input = event.target as HTMLInputElement;
+    console.log(input.value);
+  }
 }

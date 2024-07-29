@@ -18,4 +18,26 @@
   <!-- Event binding -->
   <button type="button" (click)="onClickMeHandler()">Click me</button><br />
   <button type="button" (dblclick)="onClickMeHandler()">Double click me</button>
+
+  <p>
+    (change)
+    <input
+      type="text"
+      name="txt2"
+      id="txt2"
+      [value]="my_name"
+      (change)="onChangeHandler($event)"
+    />
+  </p>
+
+  <p>
+    (keydown)
+    <input
+      type="text"
+      name="txt3"
+      id="txt3"
+      [value]="my_name"
+      (keydown)="onKeyDownHandler($event)"
+    />
+  </p>
 </div>
