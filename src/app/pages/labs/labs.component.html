@@ -86,4 +86,12 @@
   <ng-template #elseBlock>
     Perfil completo <strong>sin</strong> lista de Proyectos y Clientes
   </ng-template>
+
+  <!-- switch flow -->
+  <hr />
+  <div [ngSwitch]="user().role">
+    <p *ngSwitchCase="'Administrator'">Modo Súper Sayayín activado!</p>
+    <p *ngSwitchCase="'Editor'">Modo Editor de Contenido activado!</p>
+    <p *ngSwitchDefault>Modo Visitante activado!</p>
+  </div>
 </div>
