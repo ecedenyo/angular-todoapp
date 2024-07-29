@@ -55,4 +55,14 @@
     />
   </p>
   <p>Mi nueva ubicación: {{ myLocation() }}</p>
+
+  <!-- Control flow -->
+  <hr />
+  <ul>
+    Cant. de tareas:
+    {{
+      myTasks().length
+    }}
+    <li *ngFor="let myTask of myTasks(); index as i">{{ i }}. {{ myTask }}</li>
+  </ul>
 </div>

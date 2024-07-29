@@ -17,6 +17,13 @@ export class LabsComponent {
     'Crear servicio',
   ];
 
+  myTasks = signal([
+    'Instalar Angular CLI',
+    'Crear proyecto',
+    'Crear componentes',
+    'Crear servicio',
+  ]);
+
   myLocation = signal('La Villa');
 
   onClickMeHandler() {
